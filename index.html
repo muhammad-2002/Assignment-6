@@ -20,9 +20,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- costume css link -->
+    <link rel="stylesheet" href="style/style.css" />
   </head>
   <body>
-    <header class="w-[85%] mx-auto mt-8">
+    <header class="md:w-[85%] w-[95%] mx-auto mt-0 md:mt-8">
       <nav>
         <div class="navbar bg-base-100">
           <div class="flex-1">
@@ -33,7 +35,7 @@
               <div class="indicator">
                 <div class="flex justify-center items-baseline gap-4">
                   <div
-                    class="group bg-[#12132D] w-[50px] h-[50px] flex justify-center items-center bg-opacity-[10%] px-[11px] hover:text-white p-2 rounded-full relative"
+                    class="group hidden md:block bg-[#12132D] w-[50px] h-[50px] md:flex justify-center items-center bg-opacity-[10%] px-[11px] hover:text-white p-2 rounded-full relative"
                   >
                     <i class="fa-solid fa-house"></i>
                     <div
@@ -43,7 +45,7 @@
                     </div>
                   </div>
                   <div
-                    class="group bg-[#12132D] w-[50px] h-[50px] flex justify-center items-center bg-opacity-[10%] px-[11px] hover:text-white p-2 rounded-full relative"
+                    class="group hidden md:block bg-[#12132D] w-[50px] h-[50px] md:flex justify-center items-center bg-opacity-[10%] px-[11px] hover:text-white p-2 rounded-full relative"
                   >
                     <i class="fa-solid fa-pen"></i>
                     <div
@@ -53,7 +55,7 @@
                     </div>
                   </div>
                   <div
-                    class="group w-[50px] h-[50px] flex justify-center items-center bg-[#12132D] bg-opacity-[10%] px-[11px] hover:text-white p-2 rounded-full relative"
+                    class="group w-[50px] h-[50px] md:flex justify-center items-center hidden md:block bg-[#12132D] bg-opacity-[10%] px-[11px] hover:text-white p-2 rounded-full relative"
                   >
                     <i class="fa-solid fa-user-plus"></i>
                     <div
@@ -63,7 +65,7 @@
                     </div>
                   </div>
                   <div
-                    class="group bg-[#12132D] w-[50px] h-[50px] flex justify-center items-center bg-opacity-[10%] px-[11px] hover:text-white p-2 rounded-full relative"
+                    class="group hidden md:block bg-[#12132D] w-[50px] h-[50px] md:flex justify-center items-center bg-opacity-[10%] px-[11px] hover:text-white p-2 rounded-full relative"
                   >
                     <i class="fa-brands fa-font-awesome"></i>
                     <div
@@ -84,6 +86,65 @@
           </div>
         </div>
       </nav>
+      <!-- banner section -->
+      <div
+        class="banner-container bg-[url('./images/bgbanner.png')] mt-4 md:h-[530px] py-5 md:0 w-full bg-[#12132D] bg-no-repeat bg-bottom bg-contain rounded-3xl  flex flex-col md:flex-row justify-start items-center space-y-8 md:space-y-0"
+      >
+        <div class=" w-full md:w-[50%] flex  justify-center md:justify-end items-center ">
+          <div
+            class="w-[90%] flex flex-col justify-center items-start  space-y-5"
+          >
+            <h1
+              class="text-3xl md:text-6xl leading-normal text-start font-extrabold text-white"
+            >
+              Welcome to the<br />
+              <span class="gradient-text">ReTro</span>
+              Forum
+            </h1>
+            <p>
+              "Embark on a journey through time and memories. Welcome to the
+              ReTro Forum, where nostalgia finds its voice."
+            </p>
+            <div class="w-full md:w-[380px] h-[43px] bg-white rounded-full">
+              <div class="flex justify-between items-center px-4 py-2">
+                <input
+                  class="w-[80%] border-none outline-none h-3"
+                  type="text"
+                  placeholder="Search here anything"
+                />
+                <button
+                  class="bg-[#797DFC] py-1 px-4 text-white rounded-full font-bold"
+                >
+                  Search
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class=" w-full md:w-[50%] flex justify-center md:justify-end items-center">
+          <div class="w-[90%] flex flex-col justify-center items-center  space-y-4">
+            <div class=" w-full md:w-[400px] h-[330px] md:h-[320px] bg-white rounded-2xl p-10 space-y-10 text-[20px] font-bold">
+              <div class="text-black flex justify-between items-center">
+                <h3 class="">Registered Users</h3>
+                <h3>01</h3>
+              </div>
+              <div class="text-black flex justify-between items-center">
+                <h3 class="">Forum</h3>
+                <h3>05</h3>
+              </div>
+              <div class="text-black flex justify-between items-center">
+                <h3 class="">Topics</h3>
+                <h3>03</h3>
+              </div>
+              <div class="text-black flex justify-between items-center">
+                <h3 class="">Replies</h3>
+                <h3>02</h3>
+              </div>
+              
+          </div>
+          </div>
+          
+      </div>
     </header>
     <script src="./js/script.js"></script>
   </body>
