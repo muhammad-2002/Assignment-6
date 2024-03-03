@@ -17,7 +17,7 @@ const displayAllData=(posts)=>{
         const newDiv = document.createElement('div')
         
         newDiv.innerHTML =`
-        <div  class=" w-full md:w-full flex justify-between flex-col md:flex-row  bg-indigo-600 bg-opacity-10 rounded-md  p-7 ">
+        <div  class=" w-full md:min-w-[100%] flex justify-between flex-col md:flex-row  bg-indigo-600 bg-opacity-10 rounded-md  p-7 ">
             <div class="w-full flex md:block flex-col items-center  md:w-[20%] ">
               <div class=" w-[100px] rounded-xl h-[100px] bg-slate-300 relative">
               
@@ -83,7 +83,7 @@ const displayAllData=(posts)=>{
        
         
         
-        
+        loadingSpinner(false)
         
     });
     
@@ -119,11 +119,12 @@ const AddDataToSideBar=(name,view)=>{
 
 }
 
- async function searchByID(id){
+ async function searchByID(){
     const SearchBtn = document.getElementById('SearchBtn').value;
     const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${SearchBtn}`)
     const data = await res.json();
     const posts = data.posts
+
     displayAllData(posts)
     
     
@@ -134,7 +135,7 @@ const latestPostHandle= async()=>{
   const res = await fetch(' https://openapi.programming-hero.com/api/retro-forum/latest-posts')
   const data = await res.json();
   const cardContainer = document.getElementById('cards-container')
-  console.log(data)
+
   data.forEach((element)=>{
     const div=document.createElement('div')
     div.innerHTML=`<div class="card h-[550px]  bg-base-100  shadow-xl">
@@ -155,7 +156,7 @@ const latestPostHandle= async()=>{
             <rect width="24" height="24" fill="white"/>
           </clipPath>
         </defs>
-      </svg> ${element.author.posted_date? element.author.posted_date : 'Unknown'}</h2>
+      </svg> ${element.author.posted_date? element.author.posted_date : 'No publish date'}</h2>
       <h2 class="font-extrabold">${element.title}</h2>
       <p class="text-black">${element.description} </p>
       <div class="flex  items-center gap-6">
@@ -171,6 +172,16 @@ const latestPostHandle= async()=>{
   </div>`
   cardContainer.appendChild(div)
   })
+}
+const loadingSpinner=(isLoading)=>{
+  const loadingSpinner= document.getElementById('loading-spinner')
+  if(isLoading ===true){
+    loadingSpinner.classList.remove('hidden')
+
+  }else{
+    loadingSpinner.classList.add('hidden')
+  }
+
 }
 latestPostHandle()
 

@@ -109,12 +109,13 @@
             <div class="w-full md:w-[380px] h-[43px] bg-white rounded-full">
               <div class="flex justify-between items-center px-4 py-1 mt-[1px]">
                 <input
+                onclick=""
                   class=" w-[70%] md:w-[80%] border-none outline-none h-3"
                   type="text"
                   placeholder="Search here"
                   id="SearchBtn"
                 />
-                <button onclick="searchByID()"
+                <button onclick="searchByID();loadingSpinner(true)"
                   class="bg-[#797DFC] md:py-1 py-1 px-4 text-white rounded-full font-bold"
                 >
                   Search
@@ -156,6 +157,11 @@
           Discover, Connect, and Exchange Ideas! Welcome to the vibrant community of the ReTro Forum.</P>
       </div>
       <!-- card container -->
+      <!-- loading  -->
+      <div id="loading-spinner" class="flex justify-center items-center hidden  h-32">
+        <p class="loader text-black  "></p>
+      </div>
+      
       <div  class=" flex justify-between flex-col md:flex-row items-start mt-8 gap-16 ">
         <!-- card left -->
         <div id="card-container" class="card-container space-y-5">
