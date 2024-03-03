@@ -137,7 +137,7 @@ const latestPostHandle= async()=>{
   console.log(data)
   data.forEach((element)=>{
     const div=document.createElement('div')
-    div.innerHTML=`<div class="card w-96 bg-base-100  shadow-xl">
+    div.innerHTML=`<div class="card h-[550px]  bg-base-100  shadow-xl">
     <figure class="px-10 pt-10">
       <img src="${element.cover_image}" alt="Shoes" class="rounded-xl" />
     </figure>
